@@ -1,0 +1,442 @@
+/* Variabel Kustom */
+:root {
+  --primary-color: #212529;
+  --secondary-color: #6c757d;
+  --accent-color: #f8f9fa;
+  --text-dark: #333;
+  --text-light: #666;
+}
+
+/* Gaya Global */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+}
+
+/* Gaya Navbar */
+.navbar {
+  transition: all 0.3s ease;
+  padding: 1rem 0;
+}
+
+.navbar-scrolled {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  color: var(--primary-color) !important;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  margin: 0 0.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--primary-color) !important;
+}
+
+.navbar-nav .nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+/* Bagian Hero */
+.hero-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-section .display-4 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.hero-section .lead {
+  color: var(--text-light);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.hero-section img {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* Gaya Tombol */
+.btn {
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-dark {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-dark:hover {
+  background-color: #000;
+  border-color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Gaya Seksi (Section) */
+section {
+  padding: 4rem 0;
+}
+
+.bg-light {
+  background-color: #f8f9fa !important;
+}
+
+/* Bagian Kenapa Memilih Kami */
+.why-choose img {
+  transition: transform 0.3s ease;
+}
+
+.why-choose:hover img {
+  transform: scale(1.1);
+}
+
+/* Kartu Produk */
+.product-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid #e9ecef;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+.product-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.product-card h6 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+/* Bagian Tentang Kami */
+.about-section ul li {
+  color: var(--text-light);
+  padding: 0.25rem 0;
+}
+
+/* Info Kontak */
+.contact-info h5 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.contact-info p {
+  margin-bottom: 0.5rem;
+}
+
+/* Bagian tindakan/tombol (CTA) */
+.bg-dark {
+  background: linear-gradient(135deg, #212529 0%, #495057 100%);
+}
+
+blockquote {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.blockquote-footer {
+  color: #adb5bd !important;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(135deg, #212529 0%, #343a40 100%);
+}
+
+footer a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #adb5bd !important;
+}
+
+/* Gaya Responsif */
+@media (max-width: 768px) {
+  .hero-section {
+    text-align: center;
+    padding: 3rem 0;
+  }
+
+  .hero-section .display-4 {
+    font-size: 2.5rem;
+  }
+
+  .navbar-nav {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .product-card img {
+    height: 100px;
+  }
+
+  section {
+    padding: 3rem 0;
+  }
+
+  .modal-lg {
+    max-width: 95%;
+    margin: 1rem auto;
+  }
+
+  .modal-body {
+    padding: 2rem 1.5rem;
+  }
+
+  .contact-form .form-control {
+    padding: 0.7rem 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  .btn-lg {
+    padding: 0.7rem 2rem;
+    font-size: 1rem;
+  }
+
+  .product-actions .btn {
+    margin-bottom: 0.5rem;
+  }
+
+  .main-product-image {
+    min-height: 300px;
+  }
+
+  .product-card-image {
+    height: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section .display-4 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .product-card {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Kelas Animasi */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animasi Saat Gambar Dimuat */
+img {
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+/* Kelas Utilitas */
+.text-primary-custom {
+  color: var(--primary-color) !important;
+}
+
+.bg-primary-custom {
+  background-color: var(--primary-color) !important;
+}
+
+.shadow-custom {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08) !important;
+}
+
+.border-radius-custom {
+  border-radius: 10px !important;
+}
+
+/* Gaya Modal Kustom */
+.modal-backdrop {
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+  padding: 1.5rem 1.5rem 0;
+}
+
+.btn-close {
+  font-size: 1.2rem;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.btn-close:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Gaya Formulir */
+.contact-form .form-control {
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+
+.contact-form .form-control:focus {
+  border-color: #212529;
+  box-shadow: 0 0 0 0.2rem rgba(33, 37, 41, 0.15);
+  background-color: #fff;
+}
+
+.contact-form .form-control::placeholder {
+  color: #6c757d;
+  opacity: 0.8;
+}
+
+.contact-form .form-label {
+  color: #495057;
+  margin-bottom: 0.7rem;
+  font-size: 0.95rem;
+}
+
+/* Efek Blur Saat Modal Terbuka */
+.modal-open-blur .navbar,
+.modal-open-blur section,
+.modal-open-blur footer {
+  filter: blur(3px);
+  transition: filter 0.3s ease;
+}
+
+/* Gaya Modal Berhasil (Success) */
+.success-icon {
+  animation: successPop 0.6s ease-out;
+}
+
+@keyframes successPop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Animasi Tampilan Modal */
+.modal.fade .modal-dialog {
+  transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+  transform: scale(0.8) translateY(-50px);
+}
+
+.modal.show .modal-dialog {
+  transform: scale(1) translateY(0);
+}
+
+/* Tampilan Loading untuk Tombol Kirim */
+.btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Gaya Fokus untuk Aksesibilitas */
+.form-control:focus,
+.btn:focus {
+  outline: none;
+}
+
+/* Scrollbar Kustom untuk Textarea */
+textarea.form-control {
+  resize: vertical;
+  min-height: 120px;
+}
+
+textarea.form-control::-webkit-scrollbar {
+  width: 6px;
+}
+
+textarea.form-control::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+textarea.form-control::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+textarea.form-control::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Gaya Khusus Halaman Produk */
+.main-product-image {
+  min-height: 400px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.product-card-image {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.price-section h3 {
+  color: var(--primary-color) !important;
+}
+
+.product-specs strong {
+  color: var(--primary-color);
+}
